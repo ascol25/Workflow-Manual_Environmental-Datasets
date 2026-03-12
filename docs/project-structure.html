@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>project-structure – Workflow Manual for Environmental Data Projects</title>
+<title>Project-Structure – Workflow Manual for Environmental Data Projects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./project-structure.html">Workflow</a></li><li class="breadcrumb-item"><a href="./project-structure.html">project-structure</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./project-structure.html">Workflow</a></li><li class="breadcrumb-item"><a href="./project-structure.html">Project-Structure</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -123,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./project-structure.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">project-structure</span></a>
+ <span class="menu-text">Project-Structure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -168,15 +168,29 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#standard-directory-structure" id="toc-standard-directory-structure" class="nav-link active" data-scroll-target="#standard-directory-structure"><span class="header-section-number">1</span> Standard Directory Structure</a></li>
+  <li><a href="#directory-descriptions" id="toc-directory-descriptions" class="nav-link" data-scroll-target="#directory-descriptions"><span class="header-section-number">2</span> Directory Descriptions</a>
+  <ul class="collapse">
+  <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r"><span class="header-section-number">2.1</span> R/</a></li>
+  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis"><span class="header-section-number">2.2</span> analysis/</a></li>
+  <li><a href="#data_raw" id="toc-data_raw" class="nav-link" data-scroll-target="#data_raw"><span class="header-section-number">2.3</span> data_raw/</a></li>
+  <li><a href="#data_processed" id="toc-data_processed" class="nav-link" data-scroll-target="#data_processed"><span class="header-section-number">2.4</span> data_processed/</a></li>
+  <li><a href="#output" id="toc-output" class="nav-link" data-scroll-target="#output"><span class="header-section-number">2.5</span> output/</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/ascol25/Workflow-Manual_Environmental-Datasets/blob/main/project-structure.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ascol25/Workflow-Manual_Environmental-Datasets/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./project-structure.html">Workflow</a></li><li class="breadcrumb-item"><a href="./project-structure.html">project-structure</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./project-structure.html">Workflow</a></li><li class="breadcrumb-item"><a href="./project-structure.html">Project-Structure</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">project-structure</h1>
+<h1 class="title">Project-Structure</h1>
 </div>
 
 
@@ -193,8 +207,51 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="standard-directory-structure" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Standard Directory Structure</h1>
+<p>Each project in RStudio should follow a consistent directory structure.</p>
+<p>project/ │ ├── R/ │ scripts for reusable functions │ ├── analysis/ │ numbered analysis scripts │ ├── data_raw/ │ original raw data (never edited) │ ├── data_processed/ │ cleaned or derived datasets │ ├── output/ │ figures and tables │ ├── docs/ │ rendered reports │ ├── renv/ │ package environment │ ├── project.Rproj │ └── README.md</p>
+<hr>
+</section>
+<section id="directory-descriptions" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Directory Descriptions</h1>
+<section id="r" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="r"><span class="header-section-number">2.1</span> R/</h2>
+<p>Reusable functions used across analyses.</p>
+<p>Example:</p>
+<p>R/ clean_sensor_data.R plot_air_quality.R download_epa_data.R</p>
+<hr>
+</section>
+<section id="analysis" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="analysis"><span class="header-section-number">2.2</span> analysis/</h2>
+<p>Sequential analysis scripts.</p>
+<p>Example:</p>
+<p>analysis/ 01_download_epa_data.R 02_clean_data.R 03_merge_datasets.R 04_generate_figures.R</p>
+<hr>
+</section>
+<section id="data_raw" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="data_raw"><span class="header-section-number">2.3</span> data_raw/</h2>
+<p>Raw data should <strong>never be modified</strong>.</p>
+<p>Examples:</p>
+<ul>
+<li>EPA downloads</li>
+<li>sensor network data</li>
+<li>instrument exports</li>
+</ul>
+<hr>
+</section>
+<section id="data_processed" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="data_processed"><span class="header-section-number">2.4</span> data_processed/</h2>
+<p>Cleaned datasets used for analysis.</p>
+<hr>
+</section>
+<section id="output" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="output"><span class="header-section-number">2.5</span> output/</h2>
+<p>Generated figures and tables (in separate subfolders).</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -602,4 +659,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/ascol25/Workflow-Manual_Environmental-Datasets/blob/main/project-structure.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ascol25/Workflow-Manual_Environmental-Datasets/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ascol25/Workflow-Manual_Environmental-Datasets/blob/main/project-structure.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ascol25/Workflow-Manual_Environmental-Datasets/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

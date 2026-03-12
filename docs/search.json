@@ -1,10 +1,116 @@
 [
   {
+    "objectID": "project-structure.html",
+    "href": "project-structure.html",
+    "title": "Project-Structure",
+    "section": "",
+    "text": "Each project in RStudio should follow a consistent directory structure.\nproject/ │ ├── R/ │ scripts for reusable functions │ ├── analysis/ │ numbered analysis scripts │ ├── data_raw/ │ original raw data (never edited) │ ├── data_processed/ │ cleaned or derived datasets │ ├── output/ │ figures and tables │ ├── docs/ │ rendered reports │ ├── renv/ │ package environment │ ├── project.Rproj │ └── README.md",
+    "crumbs": [
+      "Workflow",
+      "Project-Structure"
+    ]
+  },
+  {
+    "objectID": "project-structure.html#r",
+    "href": "project-structure.html#r",
+    "title": "Project-Structure",
+    "section": "2.1 R/",
+    "text": "2.1 R/\nReusable functions used across analyses.\nExample:\nR/ clean_sensor_data.R plot_air_quality.R download_epa_data.R",
+    "crumbs": [
+      "Workflow",
+      "Project-Structure"
+    ]
+  },
+  {
+    "objectID": "project-structure.html#analysis",
+    "href": "project-structure.html#analysis",
+    "title": "Project-Structure",
+    "section": "2.2 analysis/",
+    "text": "2.2 analysis/\nSequential analysis scripts.\nExample:\nanalysis/ 01_download_epa_data.R 02_clean_data.R 03_merge_datasets.R 04_generate_figures.R",
+    "crumbs": [
+      "Workflow",
+      "Project-Structure"
+    ]
+  },
+  {
+    "objectID": "project-structure.html#data_raw",
+    "href": "project-structure.html#data_raw",
+    "title": "Project-Structure",
+    "section": "2.3 data_raw/",
+    "text": "2.3 data_raw/\nRaw data should never be modified.\nExamples:\n\nEPA downloads\nsensor network data\ninstrument exports",
+    "crumbs": [
+      "Workflow",
+      "Project-Structure"
+    ]
+  },
+  {
+    "objectID": "project-structure.html#data_processed",
+    "href": "project-structure.html#data_processed",
+    "title": "Project-Structure",
+    "section": "2.4 data_processed/",
+    "text": "2.4 data_processed/\nCleaned datasets used for analysis.",
+    "crumbs": [
+      "Workflow",
+      "Project-Structure"
+    ]
+  },
+  {
+    "objectID": "project-structure.html#output",
+    "href": "project-structure.html#output",
+    "title": "Project-Structure",
+    "section": "2.5 output/",
+    "text": "2.5 output/\nGenerated figures and tables (in separate subfolders).",
+    "crumbs": [
+      "Workflow",
+      "Project-Structure"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Workflow Manual for Environmental Data Projects",
     "section": "",
-    "text": "1 Purpose\nThis manual describes best practices for collaborative environmental data analysis using:\n\nR\nRStudio\nGit\nGitHub\nQuarto\n\nThe goal is to make projects:\n\nreproducible\nunderstandable\ncross-platform compatible\neasy for new collaborators to join.\n\n\n\n2 Core Principles\n\nKeep repositories reproducible.\nKeep filenames cross-platform safe.\nKeep local RStudio metadata out of Git.\nSeparate source code from generated outputs.\nMaintain a clear and consistent project structure.\n\n\n\n3 Contents of This Manual\nThis manual describes best practices for:\n\norganizing project directories\ncollaborating with Git and GitHub\nmanaging R package versions with renv\nhandling raw data and processed data\ntroubleshooting common workflow problems\n\nEach section in the navigation bar provides more detailed instructions.",
+    "text": "This manual describes a standardized workflow for managing environmental data analysis projects using R, GitHub, and reproducible research practices.\nThe goal is to make projects:\n\nreproducible\ncollaborative\nwell organized\neasy to archive and revisit later\n\nThe workflow described here is designed for projects involving:\n\nenvironmental monitoring data\nsensor networks\ngeospatial environmental data\ncollaborative research teams",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#reproducibility",
+    "href": "index.html#reproducibility",
+    "title": "Workflow Manual for Environmental Data Projects",
+    "section": "2.1 1. Reproducibility",
+    "text": "2.1 1. Reproducibility\nAll analyses should be reproducible from raw data to final figures using scripts.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#version-control",
+    "href": "index.html#version-control",
+    "title": "Workflow Manual for Environmental Data Projects",
+    "section": "2.2 2. Version Control",
+    "text": "2.2 2. Version Control\nAll code and documentation are tracked using Git and hosted on GitHub.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#clear-project-structure",
+    "href": "index.html#clear-project-structure",
+    "title": "Workflow Manual for Environmental Data Projects",
+    "section": "2.3 3. Clear Project Structure",
+    "text": "2.3 3. Clear Project Structure\nProjects follow a consistent directory structure so collaborators can easily understand the workflow.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#dependency-management",
+    "href": "index.html#dependency-management",
+    "title": "Workflow Manual for Environmental Data Projects",
+    "section": "2.4 4. Dependency Management",
+    "text": "2.4 4. Dependency Management\nThe R package environment is locked using renv to ensure long-term reproducibility.",
     "crumbs": [
       "Home"
     ]

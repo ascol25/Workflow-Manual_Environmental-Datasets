@@ -2,39 +2,53 @@
 title: "Workflow Manual for Environmental Data Projects"
 ---
 
-# Purpose
+# Overview
 
-This manual describes best practices for collaborative environmental data analysis using:
-
-- R
-- RStudio
-- Git
-- GitHub
-- Quarto
+This manual describes a standardized workflow for managing environmental data
+analysis projects using **R**, **GitHub**, and **reproducible research practices**.
 
 The goal is to make projects:
 
 - reproducible
-- understandable
-- cross-platform compatible
-- easy for new collaborators to join.
+- collaborative
+- well organized
+- easy to archive and revisit later
+
+The workflow described here is designed for projects involving:
+
+- environmental monitoring data
+- sensor networks
+- geospatial environmental data
+- collaborative research teams
+
+---
 
 # Core Principles
 
-1. Keep repositories reproducible.
-2. Keep filenames cross-platform safe.
-3. Keep local RStudio metadata out of Git.
-4. Separate source code from generated outputs.
-5. Maintain a clear and consistent project structure.
+## 1. Reproducibility
 
-# Contents of This Manual
+All analyses should be reproducible from raw data to final figures using scripts.
 
-This manual describes best practices for:
+## 2. Version Control
 
-- organizing project directories
-- collaborating with Git and GitHub
-- managing R package versions with `renv`
-- handling raw data and processed data
-- troubleshooting common workflow problems
+All code and documentation are tracked using **Git** and hosted on **GitHub**.
 
-Each section in the navigation bar provides more detailed instructions.
+## 3. Clear Project Structure
+
+Projects follow a consistent directory structure so collaborators can easily understand the workflow.
+
+## 4. Dependency Management
+
+The R package environment is locked using **renv** to ensure long-term reproducibility.
+
+---
+
+# Manual Contents
+
+This manual describes:
+
+- Project directory structure
+- Git workflow for collaboration
+- R package environment management
+- Data organization
+- Troubleshooting common problems

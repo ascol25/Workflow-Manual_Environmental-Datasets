@@ -123,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./project-structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">project-structure</span></a>
+ <span class="menu-text">Project-Structure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -173,9 +173,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#purpose" id="toc-purpose" class="nav-link active" data-scroll-target="#purpose"><span class="header-section-number">1</span> Purpose</a></li>
-  <li><a href="#core-principles" id="toc-core-principles" class="nav-link" data-scroll-target="#core-principles"><span class="header-section-number">2</span> Core Principles</a></li>
-  <li><a href="#contents-of-this-manual" id="toc-contents-of-this-manual" class="nav-link" data-scroll-target="#contents-of-this-manual"><span class="header-section-number">3</span> Contents of This Manual</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">1</span> Overview</a></li>
+  <li><a href="#core-principles" id="toc-core-principles" class="nav-link" data-scroll-target="#core-principles"><span class="header-section-number">2</span> Core Principles</a>
+  <ul class="collapse">
+  <li><a href="#reproducibility" id="toc-reproducibility" class="nav-link" data-scroll-target="#reproducibility"><span class="header-section-number">2.1</span> 1. Reproducibility</a></li>
+  <li><a href="#version-control" id="toc-version-control" class="nav-link" data-scroll-target="#version-control"><span class="header-section-number">2.2</span> 2. Version Control</a></li>
+  <li><a href="#clear-project-structure" id="toc-clear-project-structure" class="nav-link" data-scroll-target="#clear-project-structure"><span class="header-section-number">2.3</span> 3. Clear Project Structure</a></li>
+  <li><a href="#dependency-management" id="toc-dependency-management" class="nav-link" data-scroll-target="#dependency-management"><span class="header-section-number">2.4</span> 4. Dependency Management</a></li>
+  </ul></li>
+  <li><a href="#manual-contents" id="toc-manual-contents" class="nav-link" data-scroll-target="#manual-contents"><span class="header-section-number">3</span> Manual Contents</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/ascol25/Workflow-Manual_Environmental-Datasets/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ascol25/Workflow-Manual_Environmental-Datasets/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -201,45 +207,55 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="purpose" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Purpose</h1>
-<p>This manual describes best practices for collaborative environmental data analysis using:</p>
-<ul>
-<li>R</li>
-<li>RStudio</li>
-<li>Git</li>
-<li>GitHub</li>
-<li>Quarto</li>
-</ul>
+<section id="overview" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Overview</h1>
+<p>This manual describes a standardized workflow for managing environmental data analysis projects using <strong>R</strong>, <strong>GitHub</strong>, and <strong>reproducible research practices</strong>.</p>
 <p>The goal is to make projects:</p>
 <ul>
 <li>reproducible</li>
-<li>understandable</li>
-<li>cross-platform compatible</li>
-<li>easy for new collaborators to join.</li>
+<li>collaborative</li>
+<li>well organized</li>
+<li>easy to archive and revisit later</li>
 </ul>
+<p>The workflow described here is designed for projects involving:</p>
+<ul>
+<li>environmental monitoring data</li>
+<li>sensor networks</li>
+<li>geospatial environmental data</li>
+<li>collaborative research teams</li>
+</ul>
+<hr>
 </section>
 <section id="core-principles" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Core Principles</h1>
-<ol type="1">
-<li>Keep repositories reproducible.</li>
-<li>Keep filenames cross-platform safe.</li>
-<li>Keep local RStudio metadata out of Git.</li>
-<li>Separate source code from generated outputs.</li>
-<li>Maintain a clear and consistent project structure.</li>
-</ol>
+<section id="reproducibility" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="reproducibility"><span class="header-section-number">2.1</span> 1. Reproducibility</h2>
+<p>All analyses should be reproducible from raw data to final figures using scripts.</p>
 </section>
-<section id="contents-of-this-manual" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Contents of This Manual</h1>
-<p>This manual describes best practices for:</p>
+<section id="version-control" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="version-control"><span class="header-section-number">2.2</span> 2. Version Control</h2>
+<p>All code and documentation are tracked using <strong>Git</strong> and hosted on <strong>GitHub</strong>.</p>
+</section>
+<section id="clear-project-structure" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="clear-project-structure"><span class="header-section-number">2.3</span> 3. Clear Project Structure</h2>
+<p>Projects follow a consistent directory structure so collaborators can easily understand the workflow.</p>
+</section>
+<section id="dependency-management" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="dependency-management"><span class="header-section-number">2.4</span> 4. Dependency Management</h2>
+<p>The R package environment is locked using <strong>renv</strong> to ensure long-term reproducibility.</p>
+<hr>
+</section>
+</section>
+<section id="manual-contents" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Manual Contents</h1>
+<p>This manual describes:</p>
 <ul>
-<li>organizing project directories</li>
-<li>collaborating with Git and GitHub</li>
-<li>managing R package versions with <code>renv</code></li>
-<li>handling raw data and processed data</li>
-<li>troubleshooting common workflow problems</li>
+<li>Project directory structure</li>
+<li>Git workflow for collaboration</li>
+<li>R package environment management</li>
+<li>Data organization</li>
+<li>Troubleshooting common problems</li>
 </ul>
-<p>Each section in the navigation bar provides more detailed instructions.</p>
 
 
 </section>

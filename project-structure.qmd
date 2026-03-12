@@ -1,5 +1,90 @@
 ---
-title: "project-structure"
+title: "Project-Structure"
 format: html
 ---
 
+# Standard Directory Structure
+
+Each project in RStudio should follow a consistent directory structure.
+
+project/
+│
+├── R/
+│ scripts for reusable functions
+│
+├── analysis/
+│ numbered analysis scripts
+│
+├── data_raw/
+│ original raw data (never edited)
+│
+├── data_processed/
+│ cleaned or derived datasets
+│
+├── output/
+│ figures and tables
+│
+├── docs/
+│ rendered reports
+│
+├── renv/
+│ package environment
+│
+├── project.Rproj
+│
+└── README.md
+
+---
+
+# Directory Descriptions
+
+## R/
+
+Reusable functions used across analyses.
+
+Example:
+
+
+R/
+  clean_sensor_data.R
+  plot_air_quality.R
+  download_epa_data.R
+
+---
+
+## analysis/
+
+Sequential analysis scripts.
+
+Example:
+
+analysis/
+  01_download_epa_data.R
+  02_clean_data.R
+  03_merge_datasets.R
+  04_generate_figures.R
+
+---
+
+## data_raw/
+
+Raw data should **never be modified**.
+
+Examples:
+
+- EPA downloads
+- sensor network data
+- instrument exports
+
+---
+
+## data_processed/
+
+Cleaned datasets used for analysis.
+
+---
+
+## output/
+
+Generated figures and tables (in separate subfolders).
+  
