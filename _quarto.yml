@@ -4,20 +4,23 @@ project:
 
 website:
   title: "Workflow Manual for Environmental Data Projects"
-  navbar:
-    left:
+  repo-url: https://github.com/ascol25/Workflow-Manual_Environmental-Datasets
+  repo-actions: [source, issue]
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
       - href: index.qmd
         text: Home
-      - href: project-structure.qmd
-        text: Project Structure
-      - href: git-workflow.qmd
-        text: Git Workflow
-      - href: renv.qmd
-        text: renv
-      - href: data-management.qmd
-        text: Data Management
-      - href: troubleshooting.qmd
-        text: Troubleshooting
+      - section: Workflow
+        contents:
+          - project-structure.qmd
+          - git-workflow.qmd
+          - renv.qmd
+          - data-management.qmd
+      - section: Support
+        contents:
+          - troubleshooting.qmd
 
 format:
   html:
@@ -25,7 +28,3 @@ format:
     toc: true
     toc-depth: 3
     number-sections: true
-    
-sidebar:
-  style: "docked"
-  search: true
