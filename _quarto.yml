@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Workflow Manual for Environmental Data Projects"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: project-structure.qmd
+        text: Project Structure
+      - href: git-workflow.qmd
+        text: Git Workflow
+      - href: renv.qmd
+        text: renv
+      - href: data-management.qmd
+        text: Data Management
+      - href: troubleshooting.qmd
+        text: Troubleshooting
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    
+sidebar:
+  style: "docked"
+  search: true

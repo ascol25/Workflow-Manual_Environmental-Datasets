@@ -1,0 +1,40 @@
+---
+title: "Workflow Manual for Environmental Data Projects"
+---
+
+# Purpose
+
+This manual describes best practices for collaborative environmental data analysis using:
+
+- R
+- RStudio
+- Git
+- GitHub
+- Quarto
+
+The goal is to make projects:
+
+- reproducible
+- understandable
+- cross-platform compatible
+- easy for new collaborators to join.
+
+# Core Principles
+
+1. Keep repositories reproducible.
+2. Keep filenames cross-platform safe.
+3. Keep local RStudio metadata out of Git.
+4. Separate source code from generated outputs.
+5. Maintain a clear and consistent project structure.
+
+# Contents of This Manual
+
+This manual describes best practices for:
+
+- organizing project directories
+- collaborating with Git and GitHub
+- managing R package versions with `renv`
+- handling raw data and processed data
+- troubleshooting common workflow problems
+
+Each section in the navigation bar provides more detailed instructions.
